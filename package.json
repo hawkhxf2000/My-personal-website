@@ -14,9 +14,11 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
+    "@types/nodemailer": "^6.4.7",
     "autoprefixer": "^10.4.2",
     "classnames": "^2.3.1",
     "next": "^12.1.0",
+    "nodemailer": "^6.9.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "ts-pattern": "^4.0.3"
