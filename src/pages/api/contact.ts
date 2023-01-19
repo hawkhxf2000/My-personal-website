@@ -18,7 +18,7 @@ export default async function(req:NextApiRequest){
         requireTLS: true,
         auth: {
             user: "hawkhxf2000@gmail.com",
-            pass: "gurhfpyyiqyhhkly"
+            pass: 
         },
         logger: true
     });
