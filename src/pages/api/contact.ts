@@ -1,4 +1,4 @@
-import type {NextApiRequest} from "next";
+import type {NextApiRequest, NextApiResponse} from "next";
 import nodemailer from "nodemailer";
 // import Mail from 'nodemailer/lib/mailer'
 
@@ -8,7 +8,7 @@ import nodemailer from "nodemailer";
 //     message: string;
 // }
 
-export default async function(req:NextApiRequest){
+export default async function(req:NextApiRequest, res:NextApiResponse){
     console.log("request body",req.body)
     // return res.status(200).json({message: "The mail has been sent!"});
     const transporter = nodemailer.createTransport({
@@ -18,7 +18,8 @@ export default async function(req:NextApiRequest){
         requireTLS: true,
         auth: {
             user: "hawkhxf2000@gmail.com",
-            pass: "gurhfpyyiqyhhkly"
+            pass:''
+            // pass: "gurhfpyyiqyhhkly"
         },
         logger: true
     });
@@ -32,5 +33,8 @@ export default async function(req:NextApiRequest){
         headers: {'x-myheader': 'test header'}
     });
 
-    console.log('return message', info)
+    // console.log('return message', info)
+
+    // res.status(200);
+    res.status(200).json({info});
 }

@@ -32,29 +32,22 @@ const ContactForm: FC = memo(() => {
 
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
-      event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
-        fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }).then((res) => {
-            console.log('Response received',res)
-            if (res.status === 200) {
-                console.log('Response succeeded!')
-                // setData({...defaultData
-                // })
-                // console.log('data',data)
-            }
-        }).catch((error)=>{
-            console.log(error.stack)
-        })
+        event.preventDefault();
+        /**
+         * This is a good starting point to wire up your form submission logic
+         * */
+            console.log('Data to send: ', data);
+        alert("Thanks for your message, I will contact you ASAP!")
+        // const res = await fetch('/api/contact', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Accept': 'application/json, text/plain, */*',
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(data)
+        //     })
+        //
+        // console.log("response", res)
     },
     [data],
   );
@@ -64,7 +57,7 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text"/>
       <input
         autoComplete="email"
         className={inputClasses}
