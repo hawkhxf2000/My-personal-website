@@ -30,27 +30,27 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
-  const handleSendMessage = useCallback(
-    async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        /**
-         * This is a good starting point to wire up your form submission logic
-         * */
-            // console.log('Data to send: ', data);
-        // alert("Thanks for your message, I will contact you ASAP!")
-        const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json, text/plain, */*',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
+  const handleSendMessage = useCallback(async (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      /**
+       * This is a good starting point to wire up your form submission logic
+       * */
+          // console.log('Data to send: ', data);
+          // alert("Thanks for your message, I will contact you ASAP!")
+      const res = await fetch('/api/contact', {
+              method: 'POST',
+              headers: {
+                  'Accept': 'application/json, text/plain, */*',
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+          });
 
-        console.log("response", res)
-    },
-    [data],
-  );
+      res.ok ?
+          alert("Message has been sent, I will contact you ASAP!")
+          : alert("Something wrong! Please try again later!");
+
+  }, [data],);
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';

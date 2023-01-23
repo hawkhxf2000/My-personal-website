@@ -24,10 +24,9 @@ export default async function(req:NextApiRequest, res:NextApiResponse){
     });
 
     const info = await transporter.sendMail({
-        from: `"${req.body.name}" <${req.body.email}>`,
+        from: `"${req.body.name}" <${process.env.MAIL_USERNAME}>`,
         to: "hawkhxf2000@gmail.com",
-        subject: "Hello from my personal web",
-        // text: "Hello world?",
+        subject: "Message from my personal web",
         html: `
             <p>${req.body.name}</p>
             <p>${req.body.email}</p>
