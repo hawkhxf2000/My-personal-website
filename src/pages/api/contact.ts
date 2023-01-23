@@ -12,14 +12,13 @@ export default async function(req:NextApiRequest, res:NextApiResponse){
     console.log("request body",req.body)
     // return res.status(200).json({message: "The mail has been sent!"});
     const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
+        host: "smtp.zoho.com",
         port: 587,
         secure: false,
         requireTLS: true,
         auth: {
-            user: "hawkhxf2000@gmail.com",
-            pass:''
-            // pass: "gurhfpyyiqyhhkly"
+            user: process.env.MAIL_USERNAME,
+            pass: process.env.MAIL_KEY,
         },
         logger: true
     });
@@ -29,7 +28,11 @@ export default async function(req:NextApiRequest, res:NextApiResponse){
         to: "hawkhxf2000@gmail.com",
         subject: "Hello from my personal web",
         // text: "Hello world?",
-        html: `<p>${req.body.message}</p>`,
+        html: `
+            <p>${req.body.name}</p>
+            <p>${req.body.email}</p>
+            <p>${req.body.message}</p>
+         `,
         headers: {'x-myheader': 'test header'}
     });
 

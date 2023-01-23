@@ -36,18 +36,18 @@ const ContactForm: FC = memo(() => {
         /**
          * This is a good starting point to wire up your form submission logic
          * */
-            console.log('Data to send: ', data);
-        alert("Thanks for your message, I will contact you ASAP!")
-        // const res = await fetch('/api/contact', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Accept': 'application/json, text/plain, */*',
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify(data)
-        //     })
-        //
-        // console.log("response", res)
+            // console.log('Data to send: ', data);
+        // alert("Thanks for your message, I will contact you ASAP!")
+        const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+
+        console.log("response", res)
     },
     [data],
   );
