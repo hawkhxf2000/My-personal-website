@@ -9,10 +9,10 @@ import nodemailer from "nodemailer";
 // }
 
 export default async function(req:NextApiRequest, res:NextApiResponse){
-    console.log("request body",req.body)
+    console.log("mail host",process.env.MAIL_HOST)
     // return res.status(200).json({message: "The mail has been sent!"});
     const transporter = nodemailer.createTransport({
-        host: "smtp.zoho.com",
+        host: process.env.MAIL_HOST,
         port: 587,
         secure: false,
         requireTLS: true,
