@@ -75,7 +75,8 @@ export const heroData: Hero = {
                 I'm a Montreal based <strong className="text-stone-100">Full Stack Software Engineer</strong> focused on
                 help customers
                 develop modern, dynamic and high-performance websites. <br/>
-                In my free time, I'm an amateur <strong className="text-stone-100">soccer player</strong> and a big fan of Messi. During summer and fall time, I like Hiking,
+                In my free time, I'm an amateur <strong className="text-stone-100">soccer player</strong> and a big fan
+                of Messi. During summer and fall time, I like Hiking,
                 Kayaking, and play soccer with my kids.
             </p>
         </>
@@ -289,12 +290,14 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
     {
-        date: '2022.11 - 2023.01',
+        date: '2022 - 2023',
         location: 'Joseph Ribkoff Inc.',
-        title: 'Full-stack Developer',
+        title: 'Full-stack Developer Intern',
         content: (
             <ul className="list-disc">
-                <li>Design and build web pages for B2C management with React.js and IndexedDB</li>
+                <li>Designed and developed B2C management web pages using React.js, TypeScript, along with IndexedDB for
+                    local data storage and offline access.
+                </li>
                 <li>Query Azure database with Microsoft Graph API</li>
                 <li>Deploy and maintain web application on virtual machine</li>
                 <li>Manage Apps with Azure Active Directory</li>
@@ -302,35 +305,91 @@ export const experience: TimelineItem[] = [
         ),
     },
     {
-        date: '2022.03 - 2022.08',
+        date: '2022',
         location: 'purple Devops Inc.',
-        title: 'Back-end Developer',
+        title: 'Back-end Developer CO-OP',
         content: (
             <ul className="list-disc">
-                <li>API development with JAVA Springboot framework: development in create, read, update, and delete operations.
-                    Input and output data process.</li>
-                <li>Database design and manipulation with PostgreSql: database modeling, devising ER diagrams, access database
-                    with ORM Spring Data JPA, Multiple tables join to get data, implement performance optimization.</li>
-                <li>Service layer development includes business logics implementation, algorithm construction, object
-                    manipulation event handlers creation and unit tests</li>
-                <li>Cloud experience in code deployment using AWS</li>
+                <li>Developed API with Java Springboot framework.</li>
+                <li>Performed database design and manipulation with PostgreSql and Spring Data JPA.</li>
+                <li>Implemented Unit and Integration test.</li>
+                <li>Implemented deployment using AWS</li>
             </ul>
         ),
     },
     {
-        date: '2021.10 - 2022.03',
+        date: '2021 - 2022',
         location: 'Vanier College',
-        title: 'Java Developer',
+        title: 'Java Developer CO-OP',
         content: (
             <ul className="list-disc">
-                <li>Backend work involving the core concepts of object-oriented programming such as objects, classes, methods,
-                    encapsulation, inheritance, polymorphism, exception handling, recursion, and abstraction.</li>
-                <li>Improving/creating data structures such as: single and multi-dimensional arrays, linked list, array lists,
-                    sets, hash-sets, trees, binary trees, stack, and queues</li>
-                <li>Implementing algorithms such as: Binary Search, Bubble sorting, Selection sorting, Insertion sorting etc.</li>
+                <li>Implemented Back-end service with basic algorithm and data structure.</li>
+                <li>Developed APIs with RESTFUL API.</li>
+                <li>Implemented Unit Test case.</li>
             </ul>
         ),
     },
+    {
+        date: '2018 - 2021',
+        location: 'MAWellness S.E.N.C',
+        title: 'Web Developer/Owner',
+        content: (
+            <ul className="list-disc">
+                <li>Implemented website development and SEO wth wordpress.</li>
+                <li>Sold other consumables products to Chinese customers through social media.</li>
+                <li>Provided nutritional consultation based on customer's health status.</li>
+            </ul>
+        ),
+    },
+    {
+        date: '2014 - 2017',
+        location: 'Zendure Inc.',
+        title: 'Regional E-commerce Specialist',
+        content: (
+            <ul className="list-disc">
+                <li> Managed product content page on Amazon platform and performed SEO.</li>
+                <li>Made plan on the advertisement campaign include keyword bidding ranking and promotion.</li>
+                <li>Built and develop the relationship with Amazon KOLs of Canada in the categories.</li>
+            </ul>
+        ),
+    },
+    {
+        date: '2011 - 2014',
+        location: 'Ocean Optics Inc.',
+        title: 'Application Manager',
+        content: (
+            <ul className="list-disc">
+                <li> Worked with product developing department to provide total solution to key OEM customers.</li>
+                <li>Lead application team to develop new application field and market</li>
+                <li> Provided product education to distributors</li>
+            </ul>
+        ),
+    },
+    {
+        date: '2007 - 2010',
+        location: 'BWTEK Inc.',
+        title: 'Application Engineer',
+        content: (
+            <ul className="list-disc">
+                <li> Provided total hardware and software solution based on customer's requirement</li>
+                <li> Provided after-sales service, including installation, training and technical support</li>
+            </ul>
+        ),
+    },
+    {
+        date: '2005 - 2007',
+        location: 'BWTEK Inc.',
+        title: 'Software Engineer',
+        content: (
+            <ul className="list-disc">
+                <li> Implemented the algorithms to process the data of spectroscopy and GC-MS for quality control with
+                    Borland Delphi. Principle component Analysis(PCA), Genetic Algorithm, Neural network algorithm was
+                    used to get fingerprint character of specific components in Tobacco.
+                </li>
+                <li> Designed and developed end-to-end software solution as customer request.</li>
+            </ul>
+        ),
+    }
 ];
 
 /**
